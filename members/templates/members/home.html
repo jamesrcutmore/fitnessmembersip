@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
@@ -7,19 +8,21 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="members/style.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
         <header>
             <h1>Smart Gym</h1>
             <ul>
-                <li><a>Home</a></li>
-                <li><a>About us</a></li>
-                <li><a>Services</a></li>
-                <li><a>Login</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Login</a></li>
             </ul>
         </header>
         <h1>Welcome to our gym membership club</h1>
+        
+        
         
     </body>
 </html>

@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+ul a{
+    font-size: 20px;
+    color: black;
+}
