@@ -48,3 +48,33 @@ ul a{
     background-color: dodgerblue;
     color: white;
 }
+.membership-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.membership-card{
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+
+}
+.membership-card img{
+    width: 100%;
+    height: 400px;
+}
+.price {
+    color: gray;
+    font-size: 22px;
+}
+.membership-card button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    font-size: 18px;
+}
