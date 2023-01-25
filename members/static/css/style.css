@@ -78,3 +78,10 @@ ul a{
     cursor: pointer;
     font-size: 18px;
 }
+.about_container{
+    text-align: center;
+    margin-top: 50px;
+}
+.about_container h1{
+    margin-bottom: 20px;
+}
