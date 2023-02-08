@@ -1,0 +1,22 @@
+{% extends 'members/base.html' %}
+{% load static %}
+{% block content %}
+
+        
+        <section>
+            <form>
+                <div>
+                    <label>Email</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <button>Login</button>
+                <p>Dont have an account <a href="/register">Register here</a></p>
+            </form>
+        </section>
+
+
+{% endblock %}
