@@ -26,8 +26,13 @@ SECRET_KEY = 'bnm(rcvj_sdzme342yaepy*mciib#50079r(fxv(+&mt++o$ybb^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "jamescutmore50.pythonanywhere.com",
-                 "8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu100.gitpod.io"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "jamescutmore50.pythonanywhere.com",
+    "8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu100.gitpod.io",
+    "8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu100.gitpod.io"
+    "tyke.db.elephantsql.com"
+]
 
 
 # Application definition
@@ -78,8 +83,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'snuyrxrd',
+        'USER': 'snuyrxrd',
+        'PASSWORD': 'DdQWaVIhQjhorU0-UFb7I9oX91sjl2sX',
+        'HOST': 'tyke.db.elephantsql.com',
+        'POST': '',
     }
 }
 
