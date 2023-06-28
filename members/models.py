@@ -14,4 +14,16 @@ class Member(models.Model):
 
     def __str__(self):
         return self.firstname
+
+
+class Product(models.Model):
+    categary = models.CharField( max_length=50)
+    name = models.CharField( max_length=50)
+    user = models.ForeignKey( settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    created_at= models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.firstname       
+
+        
     

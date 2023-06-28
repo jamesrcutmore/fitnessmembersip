@@ -29,8 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "jamescutmore50.pythonanywhere.com",
-    "8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu100.gitpod.io",
-    "8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu100.gitpod.io"
+    "8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu101.gitpod.io",
     "tyke.db.elephantsql.com"
 ]
 
@@ -117,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-#TIME_ZONE = 'Europe/London'
+TIME_ZONE = 'Europe/London'
 
 
 USE_I18N = True
@@ -135,3 +134,8 @@ STATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu101.gitpod.io"
+]
+
