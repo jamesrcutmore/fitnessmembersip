@@ -21,7 +21,7 @@ class Product(models.Model):
         
     
 class Content(models.Model):
-    product = models.OneToOneField(Product, on_delete = models.CASCADE)
+    product = models.ForeignKey(Product, on_delete = models.CASCADE)
     text = models.CharField(max_length=300)
 
     def __str__(self):
@@ -32,8 +32,8 @@ class Content(models.Model):
 
 class Subscription(models.Model):
     user = models.ForeignKey( settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    product = models.OneToOneField(Product, on_delete = models.CASCADE)
+    product = models.ForeignKey(Product, on_delete = models.CASCADE)
     created_at= models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.product
+        return str(self.product)

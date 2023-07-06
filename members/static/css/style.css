@@ -85,3 +85,41 @@ ul a{
 .about_container h1{
     margin-bottom: 20px;
 }
+
+#services_container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+#services_container >div{
+    width: 300px;
+    padding: 10px;
+    background-color: #ccc;
+    
+}
+
+#services_container > div > img{
+    width: 280px;
+    display: inline-block;
+}
+#services_container ul {
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+
+#services_container ul li {
+    
+}
+#services_container a {
+ padding: 10px;
+ display: block;
+ width: 100%;
+ text-decoration: none;
+ background-color: green;
+ color: white;
+ text-align: center;
+}
