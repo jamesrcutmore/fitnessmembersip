@@ -20,6 +20,15 @@ ul a{
     font-size: 20px;
     color: black;
 }
+
+.login{
+    max-width: 30rem;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 84vh;
+    background-color: #f0f8ff80;
+}
+
 #hero-section{
     background-image: url("/static/img/gym-hero.jpg");
     background-position: center;
