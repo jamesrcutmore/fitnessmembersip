@@ -11,8 +11,13 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 
+import os
+import dj_database_url
+
+if os.path.exists("env.py"):
+    import env 
+  
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -106,15 +111,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'snuyrxrd',
-        'USER': 'snuyrxrd',
-        'PASSWORD': 'DdQWaVIhQjhorU0-UFb7I9oX91sjl2sX',
-        'HOST': 'tyke.db.elephantsql.com',
-        'POST': '',
-    }
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
