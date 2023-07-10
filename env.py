@@ -1,3 +1,3 @@
 import os
 
-os.environ["DATABASE_URL"] = "postgres://snuyrxrd:DdQWaVIhQjhorU0-UFb7I9oX91sjl2sX@tyke.db.elephantsql.com/snuyrxrd"
+os.environ["DATABASE_URL"] = "postgres://snuyrxrd:F4Awd9aEMiZ-0D_0G3zC4s4nwWUBCtk9@tyke.db.elephantsql.com/snuyrxrd"
