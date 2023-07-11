@@ -146,3 +146,36 @@ ul a {
     color: white;
     text-align: center;
 }
+
+/* Dropdown */
+#dropdown{
+    position: relative;
+}
+#dropdown-btn{
+    font-size: 20px;
+    color: black;
+}
+
+#dropdown-links{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 32px;
+    width: 200px;
+    background-color: #ccc;
+}
+
+#dropdown-links a{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+#dropdown-links a:hover{
+    background-color: aqua;
+}
+
+#dropdown:hover #dropdown-links{
+    display: flex;
+}

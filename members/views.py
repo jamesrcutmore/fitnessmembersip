@@ -25,3 +25,11 @@ def login(request):
 
 def register(request):
     return render(request, 'members/register.html')
+
+    
+def mealplans(request):
+    return render(request, 'members/mealplan.html')
+
+    
+def gymplans(request):
+    return render(request, 'members/gymplan.html')
