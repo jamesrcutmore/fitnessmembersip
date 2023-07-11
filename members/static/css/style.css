@@ -25,6 +25,7 @@ ul a {
 }
 
 .login {
+    background-color: blue;
     max-width: 30rem;
     text-align: center;
     margin: 0 auto;
