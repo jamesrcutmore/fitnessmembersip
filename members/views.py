@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Content, Product, Subscription
 
 # Create your views here.
 
@@ -26,10 +27,12 @@ def login(request):
 def register(request):
     return render(request, 'members/register.html')
 
-    
-def mealplans(request):
-    return render(request, 'members/mealplan.html')
 
-    
+def mealplans(request):
+    mealplans = Product.objects.filter(categary="nutrition").select_related('content').all()
+    print(mealplans)
+    return render(request, 'members/mealplan.html', {'mealplans': mealplans})
+
+
 def gymplans(request):
     return render(request, 'members/gymplan.html')

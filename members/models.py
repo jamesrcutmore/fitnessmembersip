@@ -3,7 +3,12 @@ from django.conf import settings
 from django.utils import timezone
 
 # Create your models here.
+    
+class Content(models.Model):
+    text = models.CharField(max_length=300)
 
+    def __str__(self):
+        return self.text
 
 
 PRODUCT_PLANS=(("nutrition","Nutrition plan"),("gym","Gym plan"))
@@ -15,18 +20,10 @@ class Product(models.Model):
     user = models.ForeignKey( settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_at= models.DateTimeField(default=timezone.now)
 
+    content = models.ForeignKey(Content, on_delete = models.CASCADE)
+
     def __str__(self):
         return self.name       
-
-        
-    
-class Content(models.Model):
-    product = models.ForeignKey(Product, on_delete = models.CASCADE)
-    text = models.CharField(max_length=300)
-
-    def __str__(self):
-        return self.text
-
 
 
 
