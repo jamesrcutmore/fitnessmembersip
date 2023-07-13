@@ -204,3 +204,27 @@ ul a {
 #dropdown:hover #dropdown-links {
     display: flex;
 }
+
+
+#footer {
+    color: #4c118f;
+}
+
+#footer a {
+    color: rgb(80, 22, 131);
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: none;
+
+}
+
+#footer p {
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
