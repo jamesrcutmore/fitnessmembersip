@@ -226,4 +226,48 @@ ul a {
     align-items: center;
     gap: 10px;
     font-size: 22px;
+    text-align: center;
 }
+
+.footer p {
+    font-size: 25px;
+    text-align: center;   
+}
+
+.text-center p-3 {
+    align-items: center;
+}
+.fa-square-facebook {
+    margin: 2px;
+    margin-bottom: 6px;
+    padding: 2px;
+    text-align: center;
+}
+.fa-square-instagram {
+    margin: 2px;
+    margin-bottom: 6px;
+    padding: 2px;
+    text-align: center;
+}
+.fa-square-pinterest {
+    margin: 2px;
+    margin-bottom: 6px;
+    padding: 2px;
+    text-align: center;
+}
+.fa-square-twitter {
+    margin: 2px;
+    margin-bottom: 6px;
+    padding: 2px;
+    text-align: center;
+}
+
+#text-center p-3{
+    text-align: center;
+}
+
+@media (max-width: 878px){
+    nav {
+        justify-content: flex-start;
+        gap: 2px;
+    }}
