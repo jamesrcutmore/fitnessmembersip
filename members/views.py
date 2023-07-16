@@ -29,10 +29,11 @@ def register(request):
 
 
 def mealplans(request):
-    mealplans = Product.objects.filter(categary="nutrition").select_related('content').all()
+    mealplans = Product.objects.filter(categary="nutrition")
     print(mealplans)
     return render(request, 'members/mealplan.html', {'mealplans': mealplans})
 
 
 def gymplans(request):
-    return render(request, 'members/gymplan.html')
+    gymplans = Product.objects.filter(categary="gym")
+    return render(request, 'members/gymplan.html', {'gymplans': gymplans})

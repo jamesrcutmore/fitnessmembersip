@@ -20,7 +20,7 @@ class Product(models.Model):
     user = models.ForeignKey( settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_at= models.DateTimeField(default=timezone.now)
 
-    content = models.ForeignKey(Content, on_delete = models.CASCADE)
+    contents = models.ManyToManyField(Content)
 
     def __str__(self):
         return self.name       

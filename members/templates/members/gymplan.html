@@ -10,18 +10,23 @@
 </section>
 
 <section id="services_container">
+
+        {%for plan in gymplans %}
         <div>
-                <h3>16 week meal plan</h3>
-                <h6>Nutrition</h6>
-                <img src="{% static 'img/about-page-img.jpg' %}" alt="dumbells and trainers">
+                <h3>{{plan.name}}</h3>
+                <h6>{{plan.category}}</h6>
+                <img src={{plan.imageurl}} alt="{{plan.name}} image">
                 <ul>
                         <li>get one to one coaching</li>
                         <li>restraunt suggestions</li>
                 </ul>
-                <h3>£20:00</h3>
+                <h3>£{{plan.price}}</h3>
                 <a href="#">Subscribe</a>
 
         </div>
+        {% endfor %}
+
+
 
 </section>
 
