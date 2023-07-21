@@ -34,7 +34,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "jamescutmore50.pythonanywhere.com",
-    "8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu101.gitpod.io",
+    "8000-jamesrcutmo-fitnessmemb-xnp0co2hqjk.ws-eu102.gitpod.io",
     "tyke.db.elephantsql.com"
 ]
 

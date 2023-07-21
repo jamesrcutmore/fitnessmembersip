@@ -11,18 +11,18 @@
 
 <section id="services_container">
         {%for plan in mealplans %}
-                <div>
-                        <h3>{{plan.name}}</h3>
-                        <h6>{{plan.category}}</h6>
-                        <img src={{plan.imageurl}} alt="{{plan.name}} image">
-                        <ul>
-                                <li>get one to one coaching</li>
-                                <li>restraunt suggestions</li>
-                        </ul>
-                        <h3>£{{plan.price}}</h3>
-                        <button>Add to cart</button>
-        
-                </div>
+        <div>
+                <h3>{{plan.name}}</h3>
+                <h6>{{plan.category}}</h6>
+                <img src={{plan.imageurl}} alt="{{plan.name}} image">
+                <ul>
+                        <li>get one to one coaching</li>
+                        <li>restraunt suggestions</li>
+                </ul>
+                <h3>£{{plan.price}}</h3>
+                <button onclick="addToCart('{{plan.name}}','{{plan.id}}','{{plan.price}}')">Add to cart</button>
+
+        </div>
         {% endfor %}
 
 </section>
