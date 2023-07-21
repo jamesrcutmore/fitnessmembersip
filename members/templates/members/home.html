@@ -1,32 +1,31 @@
 {% extends 'members/base.html' %}
 {% load static %}
 {% block content %}
-   
-      
-        <div id="hero-section">
-            <div>
-                <h1>Welcome to our Smartgym</h1>
-            <button>Get started</button>
-            </div>
-            
-        </div>
-        <div class="membership-container">
-            <div class="membership-card">
-                <img src="{% static 'img/portaitimg1.jpg' %}" alt="man exercising">
-                <h1>Monthly</h1>
-                <p class="price">£20.99</p>
-                <p>Monthly fee contract free</p>
-                <p><button>Subscribe</button></p>
-               
-            </div>
-            <div class="membership-card">
-                <img src="{% static 'img/portraitimg2.jpg' %}" alt="man exercising">
-                <h1>Yearly</h1>
-                <p class="price">£100.00</p>
-                <p>Yearly fee contract free</p>
-                <p><button>Subscribe</button></p>
-           </div> 
-        </div>
-        
-        
-    {% endblock %}
+
+
+<div id="hero-section">
+    <div>
+        <h1>Welcome to our Smartgym</h1>
+    </div>
+
+</div>
+<div class="membership-container">
+    <div class="membership-card">
+        <img src="{% static 'img/portaitimg1.jpg' %}" alt="man exercising">
+        <h1>Monthly</h1>
+        <p class="price">£20.99</p>
+        <p>Monthly fee contract free</p>
+        <p><button>Subscribe</button></p>
+
+    </div>
+    <div class="membership-card">
+        <img src="{% static 'img/portraitimg2.jpg' %}" alt="man exercising">
+        <h1>Yearly</h1>
+        <p class="price">£100.00</p>
+        <p>Yearly fee contract free</p>
+        <p><button>Subscribe</button></p>
+    </div>
+</div>
+
+
+{% endblock %}
