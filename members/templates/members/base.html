@@ -53,7 +53,7 @@
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
                 </ul>
-                
+
             </div>
             <span onclick="openCart()">
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -67,22 +67,16 @@
         <button id="close_cart" onclick="closeCart()"><i class="fa-solid fa-square-xmark"></i></button>
         <div id="modal_content">
             <div class="cart_item">
-                <p>Product  name</p>
-                <p>$50.00</p>
-            </div>
-            <div class="cart_item">
-                <p>Product  name</p>
-                <p>$50.00</p>
-            </div>
-            <div class="cart_item">
-                <p>Product  name</p>
-                <p>$50.00</p>
+                <p>Product name</p>
+                <p>$50.00 <span onclick="deleteCartItem('id')"><i class="fa-solid fa-trash-can"></i></span>
+                </p>
+
             </div>
         </div>
-        <div>
-            <div class="cart_item">
+        <div class="cart_footer">
+            <div>
                 <p>Total</p>
-                <p>$150.00</p>
+                <p id="cart_total">$150.00</p>
             </div>
             <a href="#">Checkout</a>
         </div>
@@ -131,7 +125,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-        <script src="{% static 'js/cart.js' %}"></script>
+    <script src="{% static 'js/cart.js' %}"></script>
 
 </body>
 

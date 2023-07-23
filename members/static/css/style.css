@@ -297,12 +297,40 @@ ul a {
     height: 100%;
 }
 
-.cart_item{
+.cart_item, .cart_footer div{
     padding: 5px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid black;
     margin-bottom: 3px;
+}
+
+.cart_item p span{
+    color: red;
+    margin-left: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cart_footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.cart_footer a{
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.fa-cart-shopping{
+    cursor: pointer;
 }
 
 @media (max-width: 878px){
