@@ -1,0 +1,46 @@
+{% extends 'members/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- <div id="login-image">
+        <div class="login">
+        <section>
+            <form>
+                  <div>
+                    <label>Email</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <button>Login</button>
+                <p>Dont have an account <a href="/register">Register here</a></p>
+            </form>
+        </section>
+        </div>
+    </div> -->
+
+    <div class="auth login_page">
+        {% if form.errors %}
+            <p>Your Username or password didn't match! Try again.</p>
+        {% endif %}
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+
+            {{ form.username.label_tag }}
+            {{ form.username }}
+
+            {{ form.password.label_tag }}
+            {{ form.password }}
+          <!-- <label for="fname">First Name</label> -->
+          <!-- <input type="text" id="fname" name="firstname" placeholder="Your name.."> -->
+        
+          <input type="submit" value="Login">
+          <input type="hidden" name="next" value="{{ next }}">
+        </form>
+        <p>Dont have an account <a href="/register">Register here</a></p>
+      </div>
+
+
+{% endblock %}

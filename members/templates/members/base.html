@@ -49,9 +49,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'services' %}">Services</a>
                     </li>
+
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
+                    {% endif %}
                 </ul>
 
             </div>
@@ -81,6 +88,11 @@
             <a href="#">Checkout</a>
         </div>
     </div>
+
+
+    {% if user.is_authenticated %}
+    <h2>Hello {{ user.username }} </h2>
+    {% endif %}
 
     {% block content %}
     {% endblock%}
