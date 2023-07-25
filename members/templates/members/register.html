@@ -1,27 +1,29 @@
 {% extends 'members/base.html' %}
 {% load static %}
 {% block content %}
-<div id="register-image">
-        <div id="register">
-                <section>
-                    <form>
-                        <div>
-                            <label>Email</label>
-                            <input type="text">
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <input type="password">
-                        </div>
-                        <div>
-                            <label>Password</label>
-                            <input type="password">
-                        </div>
-                        <button>Register</button>
-                    </form>
-                </section>
-        </div>
-</div>
+
+    <div class="auth">
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+
+            {% for field in form %}
+
+            {{ field.label_tag }}
+            <input
+             type="{% if 'password' in field.label_tag %}password{% else %}text{% endif %}"
+             name="{{ field.html_name }}"
+             >
+             {% if field.errors %}
+             {% for error in field.errors %}
+                 <p>{{ error | escape}}</p>
+             {% endfor %}
+            {% endif %}
+            {% endfor %}
+        
+          <input type="submit" value="Register">
+        </form>
+        <p>Already have an account <a href="{% url 'login' %}">Login here</a></p>
+      </div>
 
 
 {% endblock %}
