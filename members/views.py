@@ -40,13 +40,19 @@ def register(request):
             if user is not None:
                 login(request, user)
                 
-            return redirect('home')
+            return redirect('profile')
         else:
             messages.error(request, f'Password must conatin 8 minimum characters')
             # return redirect('register')
     else:
         form = UserCreationForm()
     return render(request, 'members/register.html', {'form': form})
+
+@login_required
+def profile(request):
+    user = request.user
+    return render(request, 'members/profile.html',{'user': user})
+
 
 
 def mealplans(request):

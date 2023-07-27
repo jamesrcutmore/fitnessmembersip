@@ -372,6 +372,28 @@ ul a {
     background-color: #45a049;
 }
 
+/* Profile Page */
+.profile_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile_container h1 {
+    width: 45%;
+}
+
+.profile_container img {
+    width: 50%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
 
 @media (max-width: 878px) {
     nav {
